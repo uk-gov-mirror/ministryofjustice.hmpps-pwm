@@ -29,5 +29,5 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./docker
-          tags: ${{ vars.CORE_SHARED_SERVICES_ACCOUNT }}.dkr.ecr.eu-west-2.amazonaws.com/delius-core-password-reset:${{ github.run_id }}-${{ github.run_attempt }}'
+          tags: ${{ vars.CORE_SHARED_SERVICES_ACCOUNT }}.dkr.ecr.eu-west-2.amazonaws.com/delius-core-password-reset:${{ github.run_id }}-${{ github.run_attempt }}', '${{ vars.CORE_SHARED_SERVICES_ACCOUNT }}.dkr.ecr.eu-west-2.amazonaws.com/delius-core-password-reset:latest
           push: true
