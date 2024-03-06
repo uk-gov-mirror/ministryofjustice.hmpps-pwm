@@ -28,6 +28,5 @@ jobs:
       - name: Build image
         uses: docker/build-push-action@v5
         with:
-          context: ./docker
           tags: 374269020027.dkr.ecr.eu-west-2.amazonaws.com/delius-core-password-management:${{ github.run_id }}-${{ github.run_attempt }}, 374269020027.dkr.ecr.eu-west-2.amazonaws.com/delius-core-password-management:latest
           push: true
