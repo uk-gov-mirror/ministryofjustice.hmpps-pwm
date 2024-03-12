@@ -9,5 +9,7 @@ SES_PASSWORD=$(jq -r '.ses_smtp_password' <<< '$SES_JSON')
 SES_USERNAME=$(jq -r '.user' <<< '$SES_JSON')
 
 envsubst '$LDAP_PASSWORD' < "${PWM_APPLICATIONPATH}/PwmConfiguration.xml"
+envsubst '$SES_PASSWORD' < "${PWM_APPLICATIONPATH}/PwmConfiguration.xml"
+envsubst '$SES_USERNAME' < "${PWM_APPLICATIONPATH}/PwmConfiguration.xml"
 echo 'Starting PWM...'
 catalina.sh run
